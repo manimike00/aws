@@ -100,7 +100,7 @@
 
   Can be used together with versioning (Current & Previous Versions)
 
-  S3 --------> Glacier ---------> Delete Objects
+  **S3** --------> **Glacier** ---------> **Delete Objects**
 ```
 #### S3 Transfer Acceleration
 ```
