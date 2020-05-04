@@ -66,7 +66,7 @@
 	SSE-C   - Customer provided key
 
   Client-Side Encryption
-    We shpuld encrypt the file locally and then upload. 
+    We should encrypt the file locally and then upload. 
 ```
 #### S3 Data Consistency
 ```
