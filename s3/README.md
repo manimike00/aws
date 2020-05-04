@@ -53,8 +53,8 @@
     Access Control Lists - Legacy Feature 
     Bucket policies - Complex Rules
 ```
-S3 Encryption
-
+#### S3 Encryption
+```
   Encryption in Transit
     Traffic b/w your localhost and S3 is achieved via SSL/TLS
 
@@ -67,7 +67,7 @@ S3 Encryption
 
   Client-Side Encryption
     We shpuld encrypt the file locally and then upload. 
-
+```
 S3 Data Consistency
 
   New Objects (PUTS)
