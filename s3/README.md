@@ -35,13 +35,13 @@
 	Fast 99.99 % availability, 119's Durability. Replicated across at least three AZs.
 #####    2. Standard Infrequently Accessed (IA)
 	50% of Standard
-    3. One Zone IA 
+#####    3. One Zone IA 
 	One AZ
-    4. Intelligent Tiering
+#####    4. Intelligent Tiering
         Uses ML to analyze object
-    5. Glacier
+#####    5. Glacier
         For long-term cold storage. Data retrieval from mins to hours. Cheap
-    6. Glacier Deep Archive
+#####    6. Glacier Deep Archive
         Low Cost. Data retrival time 12 hours.
    
 
