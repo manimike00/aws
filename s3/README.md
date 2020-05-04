@@ -1,4 +1,4 @@
-# Simplle Stroage Service (S3)
+# Simple Stroage Service (S3)
 ```
   Object-based Storage
   Serverless Storage
@@ -9,9 +9,9 @@
   Data storage architecture that manages data as objects not like file systems and block storage.
 ```
 
-Key components:
+### Key components:
 
-  S3 Object
+####  S3 Object
 
     object contains data like file
     object may consists,
