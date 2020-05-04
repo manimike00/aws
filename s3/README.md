@@ -4,10 +4,10 @@
   Serverless Storage
   No filesystem or diskspace
 ```
-What is Object Storage (Object-based Stroage) ?
-
-  data storage architecture that manages data as objects not like file systems and block storage.
-
+## What is Object Storage (Object-based Stroage) ?
+```
+  Data storage architecture that manages data as objects not like file systems and block storage.
+```
 
 Key components:
 
