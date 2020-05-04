@@ -45,14 +45,14 @@
 	Low Cost. Data retrival time 12 hours.
 ```   
 
-S3 Security
-
+#### S3 Security
+```
   Buckets are PRIVATE by default.
   Logging per request and saved in different bucket
   Access Control:
     Access Control Lists - Legacy Feature 
     Bucket policies - Complex Rules
-
+```
 S3 Encryption
 
   Encryption in Transit
