@@ -13,13 +13,13 @@
 
 ####  S3 Object
 ```
-    Object contains data like file
-    Object may consists,
-	Key - name
-	Value - data itself
-	Version ID - when versioning enabled
-	Metadata - additional info of object
-    Store data from 0 Bytes to 5 Terrabytes in size.
+  Object contains data like file
+  Object may consists,
+    Key - name
+    Value - data itself
+    Version ID - when versioning enabled
+    Metadata - additional info of object
+  Store data from 0 Bytes to 5 Terrabytes in size.
 ```
   S3 Bucket
 
