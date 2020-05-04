@@ -68,8 +68,8 @@
   Client-Side Encryption
     We shpuld encrypt the file locally and then upload. 
 ```
-S3 Data Consistency
-
+#### S3 Data Consistency
+```
   New Objects (PUTS)
     Read After Write Consistency
 	When you upload new object you are able
@@ -79,9 +79,9 @@ S3 Data Consistency
     Eventual Consistency
 	When you overwrite or delete it takes time to
 	replicate to AZs.
-
-S3 Cross-Region Replication
-
+```
+#### S3 Cross-Region Replication
+```
   Useful when disater happens.
 
   When enabled and specify, Object replicated to another region
@@ -89,7 +89,7 @@ S3 Cross-Region Replication
 
   Versioning should be enabled on both buckets
   Also for another AWS Account.
-
+```
 S3 Versioning
 
   All Objects have version ID.
