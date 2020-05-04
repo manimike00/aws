@@ -32,17 +32,17 @@
   Trade Retrieval Time, Accessibility and Durability for Cheaper Storage.
 ```
    1. Standard (default) 
-  Fast 99.99 % availability, 119's Durability. Replicated across at least three AZs.
+  	Fast 99.99 % availability, 119's Durability. Replicated across at least three AZs.
    2. Standard Infrequently Accessed (IA)
-  50% of Standard
+	50% of Standard
    3. One Zone IA 
-  One AZ
+	One AZ
    4. Intelligent Tiering
-  Uses ML to analyze object
+	Uses ML to analyze object
    5. Glacier
-  For long-term cold storage. Data retrieval from mins to hours. Cheap
+	For long-term cold storage. Data retrieval from mins to hours. Cheap
    6. Glacier Deep Archive
-        Low Cost. Data retrival time 12 hours.
+	Low Cost. Data retrival time 12 hours.
 ```   
 
 S3 Security
