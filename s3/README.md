@@ -1,9 +1,9 @@
-#S3
-
+# Simplle Stroage Service (S3)
+```
   Object-based Storage
   Serverless Storage
   No filesystem or diskspace
-
+```
 What is Object Storage (Object-based Stroage) ?
 
   data storage architecture that manages data as objects not like file systems and block storage.
@@ -114,3 +114,25 @@ S3 Transfer Acceleration
   Uploads Data using distinct URL for an Edge Location.
 
   USER --------> Edge Location ============> S3
+
+S3 Presigned URLs
+
+  Generate a URL that provides for upload and download object data.
+
+  $ aws s3 presign s3://mybucket/myobject --expires-in 300
+
+  URL ===> https://mybucket.s3.amazonaws.com/myobject?AWSAccessKeyId=ANHA&Signature=AJNJNK
+
+S3 MFA Delete
+
+  Ensures user can't delete file without MFA Code
+
+  To implement:
+
+  1. AWS CLI must be user to turn on MFA
+  2. Bucket must be versioning enabled
+
+   $ aws s3api put-bucket-versioning \
+	--bucket bucketname \
+	--versioning-configuration Status=Enabled,MFADelete=Enabled \
+	--mfa "mfa-serial-number mfa-code"
