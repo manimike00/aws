@@ -21,12 +21,12 @@
     Metadata - additional info of object
   Store data from 0 Bytes to 5 Terrabytes in size.
 ```
-  S3 Bucket
-
-    Bucket hold objects.
-    It can also have folders.
-    S3 names should be unique.
-
+####  S3 Bucket
+```
+  Bucket hold objects.
+  It can also have folders.
+  S3 names should be unique.
+```
 S3 Storage Classes
 
   Trade Retrieval Time, Accessibility and Durability for Cheaper Storage.
