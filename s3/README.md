@@ -48,7 +48,7 @@
 #### S3 Security
 ```
   Buckets are PRIVATE by default.
-  Logging per request and saved in different bucket
+  Logging per request and saved in different bucket.
   Access Control:
     Access Control Lists - Legacy Feature 
     Bucket policies - Complex Rules
