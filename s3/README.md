@@ -72,13 +72,11 @@
 ```
   New Objects (PUTS)
     Read After Write Consistency
-	When you upload new object you are able
-	to read immediately.
+	When you upload new object you are able	to read immediately.
    
   Overwrite (PUTS) or Delete Objects (DELETES)
     Eventual Consistency
-	When you overwrite or delete it takes time to
-	replicate to AZs.
+	When you overwrite or delete it takes time to replicate to AZs.
 ```
 #### S3 Cross-Region Replication
 ```
