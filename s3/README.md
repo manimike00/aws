@@ -12,16 +12,15 @@
 ### Key components:
 
 ####  S3 Object
-
-    object contains data like file
-    object may consists,
-	Key - name
-	Value - data itself
-	Version ID - when versioning enabled
-	Metadata - additional info of object
-
-    Store data from 0 Bytes to 5 Terrabytes in size.
-
+```
+    1. Object contains data like file
+    2. Object may consists,
+	+ Key - name
+	+ Value - data itself
+	+ Version ID - when versioning enabled
+	+ Metadata - additional info of object
+    3. Store data from 0 Bytes to 5 Terrabytes in size.
+```
   S3 Bucket
 
     Bucket hold objects.
