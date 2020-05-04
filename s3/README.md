@@ -33,7 +33,7 @@ S3 Storage Classes
 
 #####    1. Standard (default) 
 	Fast 99.99 % availability, 119's Durability. Replicated across at least three AZs.
-    2. Standard Infrequently Accessed (IA)
+#####    2. Standard Infrequently Accessed (IA)
 	50% of Standard
     3. One Zone IA 
 	One AZ
