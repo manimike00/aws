@@ -90,40 +90,40 @@
   Versioning should be enabled on both buckets
   Also for another AWS Account.
 ```
-S3 Versioning
-
+#### S3 Versioning
+```
   All Objects have version ID.
   Versions all Objects.
   Once Enabled can't disabled, only suspend versioning.
   MFA Delete Feature provides extra protection against deletion
-
-S3 Lifecycle Management
-
+```
+#### S3 Lifecycle Management
+```
   Automate the process of moving objects to different Stroage Classes
   or deleting objects all together.
 
   Can be used together with versioning (Current & Previous Versions)
 
   S3 --------> Glacier ---------> Delete Objects
-
-S3 Transfer Acceleration
-
+```
+#### S3 Transfer Acceleration
+```
   Fast and Secure transfer files over long distances b/w user & S3.
   Utilizes CloudFront's distributed Edge Locations (Data Center)
   Uploads Data using distinct URL for an Edge Location.
 
   USER --------> Edge Location ============> S3
-
-S3 Presigned URLs
-
+```
+#### S3 Presigned URLs
+```
   Generate a URL that provides for upload and download object data.
 
   $ aws s3 presign s3://mybucket/myobject --expires-in 300
 
   URL ===> https://mybucket.s3.amazonaws.com/myobject?AWSAccessKeyId=ANHA&Signature=AJNJNK
-
-S3 MFA Delete
-
+```
+#### S3 MFA Delete
+```
   Ensures user can't delete file without MFA Code
 
   To implement:
@@ -135,3 +135,4 @@ S3 MFA Delete
 	--bucket bucketname \
 	--versioning-configuration Status=Enabled,MFADelete=Enabled \
 	--mfa "mfa-serial-number mfa-code"
+```
