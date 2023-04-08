@@ -35,3 +35,4 @@ terraform.rc
 
 **/.idea/*
 *.terraform.lock.hcl*
+*terraform.log*
