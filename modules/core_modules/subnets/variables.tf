@@ -6,5 +6,7 @@ variable "project" {}
 
 # subnets variables
 variable "vpc_id" {}
-variable "cidr_block" {}
-variable "subnet_range" {}
+variable "cidr_block" {
+  type = list(string)
+}
+#variable "subnet_range" {}

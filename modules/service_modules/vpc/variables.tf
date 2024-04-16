@@ -6,3 +6,6 @@ variable "location" {}
 
 # virtual priavte network
 variable "cidr_block" {}
+variable "public_cidr" {}
+variable "private_cidr" {}
+variable "db_cidr" {}

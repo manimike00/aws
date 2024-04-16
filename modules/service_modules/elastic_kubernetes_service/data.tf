@@ -44,7 +44,7 @@ data "tls_certificate" "openid" {
 data "aws_caller_identity" "current" {}
 
 data "template_file" "lb_trust_policy" {
-  template = file(abspath("load-balancer-role-trust-policy.json"))
+  template = file("${path.module}/load-balancer-role-trust-policy.json")
   vars = {
     ACCOUNT_ID = data.aws_caller_identity.current.account_id,
     OPENID_URL = trim(module.eks.cluster_openid_url, "https://")
@@ -52,5 +52,5 @@ data "template_file" "lb_trust_policy" {
 }
 
 data "template_file" "lb_policy" {
-  template = file(abspath("load-balancer-role-policy.json"))
+  template = file("${path.module}/load-balancer-role-policy.json")
 }

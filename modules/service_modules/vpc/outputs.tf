@@ -10,22 +10,23 @@ output "vpc_cidr_block" {
 }
 
 # subnets
-#output "subnet_arn" {
-#  value = module.subnets.*.subnet_arn
-#}
-#output "subnet_id" {
-#  value = module.subnets.*.subnet_id
-#}
-#output "subnet_cidr_block" {
-#  value = module.subnets.*.subnet_cidr
-#}
-output "public_subnet_ids" {
+output "subnet_arn" {
+  value = module.subnets.*.subnet_arn
+}
+output "subnet_id" {
+  value = module.subnets.*.subnet_id
+}
+output "subnet_cidr_block" {
+  value = module.subnets.*.subnet_cidr
+}
+
+output "db_subnet_ids" {
   value = module.subnets[0].subnet_id
 }
 output "private_subnet_ids" {
   value = module.subnets[1].subnet_id
 }
-output "db_subnet_ids" {
+output "public_subnet_ids" {
   value = module.subnets[2].subnet_id
 }
 # internet gatwway
@@ -62,22 +63,4 @@ output "private_route_table_id" {
 }
 output "db_route_table_id" {
   value = module.route_tables[2].route_table_id[0]
-}
-
-# kubernetes api-server security group
-output "kube_api_server_sg" {
-  value = module.security_group.security_group_id
-}
-
-# kubernetes kube_api_server
-output "kube_api_server" {
-  value = module.eks.kube_api_server
-}
-
-output "openid_url" {
-  value = trim(module.eks.cluster_openid_url, "https://")
-}
-
-output "thumbprint" {
-  value = data.tls_certificate.openid.certificates.0.sha1_fingerprint
 }
