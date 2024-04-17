@@ -15,19 +15,19 @@ locals {
   subnets = {
     pub = var.public_cidr,
     pri = var.private_cidr,
-    db = var.db_cidr
+    db  = var.db_cidr
   }
 }
 
 module "subnets" {
-  source       = "../../core_modules/subnets"
-  count        = length(local.subnets)
-  name         = "${var.env}-${var.name}-${var.project}-${keys(local.subnets)[count.index]}"
-  env          = var.env
-  project      = var.project
-  location     = var.location
-  vpc_id       = module.vpc.vpc_id
-  cidr_block   = local.subnets[keys(local.subnets)[count.index]]
+  source     = "../../core_modules/subnets"
+  count      = length(local.subnets)
+  name       = "${var.env}-${var.name}-${var.project}-${keys(local.subnets)[count.index]}"
+  env        = var.env
+  project    = var.project
+  location   = var.location
+  vpc_id     = module.vpc.vpc_id
+  cidr_block = local.subnets[keys(local.subnets)[count.index]]
 }
 
 # internet gateway
@@ -79,4 +79,25 @@ module "rote_table_association" {
   count          = length(local.subnets)
   route_table_id = module.route_tables[count.index].route_table_id[0]
   subnet_id      = module.subnets[count.index].subnet_id
+}
+
+module "vpc_flowlog_s3" {
+  source   = "../../core_modules/s3"
+  bucket   = "${var.env}${var.name}${var.project}vpcflowlogs"
+  name     = "${var.env}-${var.name}-${var.project}"
+  env      = var.env
+  project  = var.project
+  location = var.location
+}
+
+module "vpc_flowlog" {
+  source               = "../../core_modules/vpc_flow_log"
+  name                 = "${var.env}-${var.name}-${var.project}"
+  env                  = var.env
+  project              = var.project
+  location             = var.location
+  log_destination      = module.vpc_flowlog_s3.s3_bucket_arn
+  log_destination_type = "s3"
+  traffic_type         = "ALL"
+  vpc_id               = module.vpc.vpc_id
 }
