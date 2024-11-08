@@ -1,8 +1,8 @@
 module "network" {
   source       = "../../modules/service_modules/vpc"
-  name         = ""
-  env          = ""
-  project      = ""
+  name         = "demo"
+  env          = "dev"
+  project      = "aota"
   location     = "ap-southeast-1"
   cidr_block   = "10.13.0.0/16"
   public_cidr  = ["10.13.27.0/26", "10.13.27.64/26", "10.13.27.128/26"]

@@ -101,3 +101,9 @@ module "vpc_flowlog" {
   traffic_type         = "ALL"
   vpc_id               = module.vpc.vpc_id
 }
+
+module "athena_database" {
+  source = "../../core_modules/athena_database"
+  name = "${var.env}${var.name}${var.project}"
+  bucket = module.vpc_flowlog_s3.s3_bucket_id
+}
